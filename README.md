@@ -34,6 +34,7 @@ commitMutation(environment, {mutation, variables})
     // handle successful response
   })
   .catch(error => {
+    const graphqlErrors = error.source.errors;
     // handle error
   });
 ```
