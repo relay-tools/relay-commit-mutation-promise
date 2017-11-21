@@ -42,6 +42,5 @@ Usage with Relay Modern compat layer
 ```js
 const commitMutation = require('relay-commit-mutation-promise/compat');
 ```
-
-## Limitations
-If one or more errors are returned in the mutation payload, the promise will be rejected with the first error. You should not use this library if you need access to more than on returned error.
+## Accessing GraphQL errors
+The error object returned in the rejected promise contains a `source` property which contains an array of the errors returned by the GraphQL server.
