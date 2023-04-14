@@ -1,8 +1,8 @@
-var Relay = require('react-relay');
+var { commitMutation } = require('relay-runtime');
 
 function commitMutationPromise(environment, config) {
     return new Promise(function (resolve, reject) {
-        Relay.commitMutation(
+        commitMutation(
             environment,
             Object.assign(
                 {},
